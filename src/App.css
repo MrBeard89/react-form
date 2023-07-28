@@ -1,3 +1,41 @@
 .App {
   text-align: center;
 }
+
+.gender-container {
+  padding-left: 0;
+}
+.gender-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.gender-label {
+  padding-right: 0.3rem;
+}
+
+#genderSelect {
+  margin: 0;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+.form-label,
+.form-check-label {
+  display: flex;
+  justify-content: flex-start;
+}
+.birth-date-container,
+.misc-data-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.birth-date-label,
+.misc-data-label {
+  padding-right: 4rem;
+}
