@@ -1,6 +1,9 @@
+/* main App */
 .App {
   text-align: center;
 }
+
+/* Gender checkbox area */
 
 .gender-container {
   padding-left: 0;
@@ -23,6 +26,9 @@
   display: flex;
   align-items: center;
 }
+
+/* ***************************************** */
+
 .form-label,
 .form-check-label {
   display: flex;
@@ -40,19 +46,23 @@
   padding-right: 4rem;
 }
 
-.calendar-icon {
-  font-size: 1.5rem;
-}
+/* date picker */
 .date-picker {
   width: 12rem;
   height: 2rem;
   border-radius: 8px;
 }
+
+/* btn container */
+
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
+
+/* Hide and show classes */
+
 .hidden {
   display: none;
 }
