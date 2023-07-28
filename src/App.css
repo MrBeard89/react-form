@@ -32,10 +32,169 @@
 .misc-data-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .birth-date-label,
 .misc-data-label {
   padding-right: 4rem;
+}
+
+.calendar-icon {
+  font-size: 1.5rem;
+}
+.date-picker {
+  width: 12rem;
+  height: 2rem;
+  border-radius: 8px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+/***************** Validation - lastname *****************/
+
+#lastName:not(:focus) + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Kérem irjon egy érvényes vezetéknevet';
+  font-size: 12px;
+}
+
+#lastName:valid + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Érvényes név';
+  font-size: 12px;
+  color: green;
+  transition: 0.3s ease;
+}
+
+/* Border - color */
+
+#lastName:valid {
+  border: 2px solid green;
+  transition: 0.3s ease;
+}
+
+#lastName:invalid {
+  border: 2px solid red;
+  transition: 0.3s ease;
+}
+
+#lastName:is(:placeholder-shown) {
+  border: 2px solid rgb(211, 211, 211);
+  transition: 0.3s ease;
+}
+
+/***************** Validation - firstname *****************/
+
+#firstName:not(:focus) + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Kérem irjon egy érvényes keresztnevet';
+  font-size: 12px;
+}
+
+#firstName:valid + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Érvényes név';
+  font-size: 12px;
+  color: green;
+  transition: 0.3s ease;
+}
+
+/* Border - color */
+
+#firstName:valid {
+  border: 2px solid green;
+  transition: 0.3s ease;
+}
+
+#firstName:invalid {
+  border: 2px solid red;
+  transition: 0.3s ease;
+}
+
+#firstName:is(:placeholder-shown) {
+  border: 2px solid rgb(211, 211, 211);
+  transition: 0.3s ease;
+}
+
+/***************** Validation - telephone *****************/
+
+#telephone-number:not(:focus) + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Kérem irjon egy érvényes telefonszámot';
+  font-size: 12px;
+}
+
+#telephone-number:valid + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Érvényes telefonszám';
+  font-size: 12px;
+  color: green;
+  transition: 0.3s ease;
+}
+
+/* Border - color */
+
+#telephone-number:valid {
+  border: 2px solid green;
+  transition: 0.3s ease;
+}
+
+#telephone-number:invalid {
+  border: 2px solid red;
+  transition: 0.3s ease;
+}
+
+#telephone-number:is(:placeholder-shown) {
+  border: 2px solid rgb(211, 211, 211);
+  transition: 0.3s ease;
+}
+
+/***************** Validation - email *****************/
+
+#email:not(:focus) + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Kérem irjon egy érvényes email-címet';
+  font-size: 12px;
+}
+
+#email:valid + .hu::after {
+  position: absolute;
+  left: 18px;
+  content: 'Érvényes email-cím';
+  font-size: 12px;
+  color: green;
+  transition: 0.3s ease;
+}
+
+/* Border - color */
+
+#email:valid {
+  border: 2px solid green;
+  transition: 0.3s ease;
+}
+
+#email:invalid {
+  border: 2px solid red;
+  transition: 0.3s ease;
+}
+
+#email:is(:placeholder-shown) {
+  border: 2px solid rgb(211, 211, 211);
+  transition: 0.3s ease;
 }
