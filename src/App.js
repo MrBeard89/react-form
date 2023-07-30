@@ -28,6 +28,10 @@ function App() {
 
   const handleChangeGender = (event) => {
     setGender(event.target.value)
+
+    if (event.target.value === gender && event.checked !== true) {
+      setGender('')
+    }
   }
 
   const handleChangeTelephone = (event) => {
@@ -150,7 +154,7 @@ function App() {
                 {/* Gender select container and Checkboxes */}
 
                 <div className='mb-5 form-check gender-container'>
-                  <label className='form-check-label' htmlFor='genderSelect'>
+                  <label className='form-check-label gender-container-label' htmlFor='genderSelect'>
                     Neme
                   </label>
                   <div className='gender-select'>
@@ -161,13 +165,13 @@ function App() {
                           : 'checkbox-container show'
                       }
                     >
-                      <label className='gender-label'>{female}:</label>
+                      <label className='gender-label'>{female}</label>
                       <input
                         type='checkbox'
                         className='form-check-input  mt-1'
                         id='genderSelect'
                         value={female}
-                        onClick={handleChangeGender}
+                        onChange={handleChangeGender}
                         checked={gender === 'Nő' ? true : false}
                       />
                     </div>
@@ -179,13 +183,13 @@ function App() {
                           : 'checkbox-container show'
                       }
                     >
-                      <label className='gender-label'>{male}:</label>
+                      <label className='gender-label'>{male}</label>
                       <input
                         type='checkbox'
                         className='form-check-input mt-1 '
                         id='genderSelect'
                         value={male}
-                        onClick={handleChangeGender}
+                        onChange={handleChangeGender}
                         checked={gender === 'Férfi' ? true : false}
                       />
                     </div>
@@ -229,6 +233,8 @@ function App() {
                 </div>
 
                 {/* Misc data switcher container */}
+
+                <hr className='mb-2' />
 
                 <div className='form-check form-switch misc-data-container p-0 mb-3'>
                   <label className='form-check-label ' htmlFor='misc-data'>

@@ -8,7 +8,12 @@
 .gender-container {
   padding-left: 0;
 }
+.gender-container-label {
+  position: absolute;
+  margin-top: -2px;
+}
 .gender-select {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,7 +191,7 @@
 #email:valid + .hu::after {
   position: absolute;
   left: 18px;
-  content: 'Érvényes email-cím';
+  content: '';
   font-size: 12px;
   color: green;
   transition: 0.3s ease;
